@@ -34,19 +34,9 @@ router.get('/:id', async (req, res) => {
 });
 
 // Post movie to db
-router.put('/:id', async (req, res) => {
+router.post('/:id', async (req, res) => {
     try {
-        const movieData = await Movie.create(
-            {
-                movie_title: req.body.movie_title,
-                tmdb_id: req.body.tmdb_id,
-            }
-        );
-
-        if (!movieData) {
-            res.status(404).json({ message: 'No movie found with this id!' });
-            return;
-        }
+        const movieData = await Movie.create(req.body);
 
         res.status(200).json(movieData);
     } catch (err) {
