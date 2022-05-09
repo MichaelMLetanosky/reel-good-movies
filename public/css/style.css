@@ -1,0 +1,7 @@
+
+.homepage-background{
+    height: 100vh;
+    background-image: url("./movie-theater1.webp");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
