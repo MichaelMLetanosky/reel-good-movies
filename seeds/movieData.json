@@ -1,22 +1,18 @@
 [
   {
-    "username": "Sal",
-    "password": "password12345"
+    "movie_title": "Back to the Future",
+    "tmdb_id": "12345"
   },
   {
-    "username": "Lernantino",
-    "password": "password23456"
+    "movie_title": "La La Land",
+    "tmdb_id": "12345"
   },
   {
-    "username": "Amiko",
-    "password": "password34567"
+    "movie_title": "Mulan",
+    "tmdb_id": "12345"
   },
   {
-    "username": "Jordan",
-    "password": "password45678"
-  },
-  {
-    "username": "Blake",
-    "password": "password56789"
+    "movie_title": "Mad Max: Fury Road",
+    "tmdb_id": "12345"
   }
 ]
