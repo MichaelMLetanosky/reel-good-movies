@@ -12,17 +12,17 @@ FollowedUser.init(
       primaryKey: true,
       autoIncrement: true
     },
-    user_id: {
+    follower_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
       }
     },
-    movie_id: {
+    followee_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'movie',
+        model: 'user',
         key: 'id',
       }
     }
