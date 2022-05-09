@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reel Good Movies</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <nav class="navbar is-light" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="" href="">
-          <img src="../img/cropped-Reel Good Movies-logos_transparent.png" style="height: 4.5rem;">
+          <img src="./cropped-Reel Good Movies-logos_transparent.png" style="height: 4.5rem;">
         </a>
         <div class="navbar-start">
           <div class="control navbar-item">
@@ -54,13 +54,38 @@
                   </a>
                 </div>
               -->
-
-
             </div>
           </div>
         </div>
       </div>
     </nav>
+
+
+    <!--HOMEPAGE PICTURE AND SEARCH BOX-->
+    <main>
+      <div class="box search-box">
+        <h1 class="search-box-header">Search for a movie</h1>
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="search" placeholder="Search">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-success">
+              Search
+            </button>
+          </p>
+        </div>
+      </div>
+      <!--potentially different pictures that we have in our database?-->
+      <img src="./movie-theater1.webp" alt="placeholder">
+    </main>
+
+<!--END OF SAMPLE HOMEPAGE SEARCH AND PICTURE-->
 
     <footer class="footer">
       <div class="content has-text-centered">
@@ -69,6 +94,5 @@
         </p>
       </div>
     </footer>
-
   </body>
 </html>

@@ -1,7 +1,12 @@
+/*styling for homepage searchbox*/
+.search-box{
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 40%;
 
-.homepage-background{
-    height: 100vh;
-    background-image: url("./movie-theater1.webp");
-    background-repeat: no-repeat; 
-    background-size: cover; 
 }
+.search-box-header{
+    font-size: 200%;
+    font-weight: 500;
+}
+/*end of styling for homepage searchbox*/
