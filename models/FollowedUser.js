@@ -12,6 +12,7 @@ FollowedUser.init(
       primaryKey: true,
       autoIncrement: true
     },
+    // The user requesting to follow another users reviews
     follower_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -19,6 +20,7 @@ FollowedUser.init(
         key: 'id',
       }
     },
+    // The writer of review(s)
     followee_id: {
       type: DataTypes.INTEGER,
       references: {
