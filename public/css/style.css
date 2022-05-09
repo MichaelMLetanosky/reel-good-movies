@@ -1,7 +1,34 @@
+:root{
+    --primary: #6b0f1aff;
+    --accent: #07beb8ff;
+    --neutral: #524632ff;
+    --dark: #151e3fff;
+    --light: #ffffffff;
 
-.homepage-background{
-    height: 100vh;
-    background-image: url("./movie-theater1.webp");
-    background-repeat: no-repeat; 
-    background-size: cover; 
 }
+
+/*styling for homepage searchbox*/
+.search-box{
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    left: 25%;
+
+}
+.search-box-header{
+    font-size: 200%;
+    font-weight: 500;
+}
+/*end of styling for homepage searchbox*/
+/*styling for search results list*/
+.rearch-results-section{
+    margin: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.search-results-list{
+    border-bottom: grey solid;
+    padding: 3%;
+}
+/*end of styling for search results list*/
