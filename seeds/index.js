@@ -16,9 +16,13 @@ const seedAll = async () => {
     returning: true,
   });
 
-  // await Post.bulkCreate(postData)
+  await Movie.bulkCreate(movieData)
 
-  // await Comment.bulkCreate(commentData)
+  await Review.bulkCreate(reviewData)
+
+  await UserMovie.bulkCreate(userMovieData)
+
+  await FollowedUser.bulkCreate(followedUserData)
  
   process.exit(0);
 };
