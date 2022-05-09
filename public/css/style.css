@@ -32,3 +32,18 @@
     padding: 3%;
 }
 /*end of styling for search results list*/
+/*Movie list thumbnail styling*/
+.movie-results{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+.img-small-poster{
+    margin: 5px;
+}
+h1{
+    margin-left: 5%;
+    font-size: 400%;
+    font-weight: 500;
+    font-family:'Josefin Sans', sans-serif;
+}
