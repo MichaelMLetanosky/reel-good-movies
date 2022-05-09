@@ -12,17 +12,17 @@ UserMovie.init(
       primaryKey: true,
       autoIncrement: true
     },
-    product_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'product',
+        model: 'user',
         key: 'id',
       }
     },
-    tag_id: {
+    movie_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'tag',
+        model: 'movie',
         key: 'id',
       }
     }
