@@ -1,8 +1,9 @@
 /*styling for homepage searchbox*/
 .search-box{
     position: absolute;
-    margin-top: 25%;
-    margin-left: 40%;
+    top: 30%;
+    right: 25%;
+    left: 25%;
 
 }
 .search-box-header{
@@ -10,3 +11,15 @@
     font-weight: 500;
 }
 /*end of styling for homepage searchbox*/
+/*styling for search results list*/
+.rearch-results-section{
+    margin: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.search-results-list{
+    border-bottom: grey solid;
+    padding: 3%;
+}
+/*end of styling for search results list*/
