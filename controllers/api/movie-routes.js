@@ -71,6 +71,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+// Delete movie from db by ID
 router.delete('/:id', async (req, res) => {
     try {
         const movieData = await Movie.destroy({
