@@ -1,22 +1,22 @@
 [
   {
-    "username": "Sal",
-    "password": "password12345"
+    "follower_id": "1",
+    "followee_id": "2"
   },
   {
-    "username": "Lernantino",
-    "password": "password23456"
+    "follower_id": "2",
+    "followee_id": "4"
   },
   {
-    "username": "Amiko",
-    "password": "password34567"
+    "follower_id": "3",
+    "followee_id": "5"
   },
   {
-    "username": "Jordan",
-    "password": "password45678"
+    "follower_id": "4",
+    "followee_id": "5"
   },
   {
-    "username": "Blake",
-    "password": "password56789"
+    "follower_id": "5",
+    "followee_id": "2"
   }
 ]
