@@ -1,3 +1,12 @@
+:root{
+    --primary: #6b0f1aff;
+    --accent: #07beb8ff;
+    --neutral: #524632ff;
+    --dark: #151e3fff;
+    --light: #ffffffff;
+
+}
+
 /*styling for homepage searchbox*/
 .search-box{
     position: absolute;
