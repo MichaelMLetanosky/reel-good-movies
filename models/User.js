@@ -35,14 +35,6 @@ User.init(
       validate: {
         len: [6],
       },
-    },
-    favorite_movies: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    followed_users: {
-      type: DataTypes.STRING,
-      allowNull: false,
     }
   },
   {
