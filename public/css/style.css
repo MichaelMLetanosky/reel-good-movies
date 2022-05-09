@@ -47,3 +47,22 @@ h1{
     font-weight: 500;
     font-family:'Josefin Sans', sans-serif;
 }
+.profile-info{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.review-overflow {
+    height: 17rem;
+    overflow: scroll;
+  }
+  .review-element{
+    border-bottom: grey solid;
+    padding-bottom: 1%;
+}
+.movie-profile-list{
+    margin-top: 3%;
+}
+.profile-lists{
+    margin: 4%;
+}
