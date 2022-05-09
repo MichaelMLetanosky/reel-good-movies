@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Sequelize, Model, DataTypes } = require("sequelize");
 const sequelize = require('../config/connection');
 
 class Review extends Model {}
@@ -12,7 +12,7 @@ Review.init(
       autoIncrement: true
     },
     content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false
     },
     review_likes: {

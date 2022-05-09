@@ -39,6 +39,7 @@ User.belongsToMany(Movie, {
 // For Followed Users
 
 User.belongsToMany(User, {
+    as: "follower",
     through: {
         model: FollowedUser,
         unique: false
