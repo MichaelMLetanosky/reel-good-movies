@@ -11,13 +11,27 @@ Review.init(
       primaryKey: true,
       autoIncrement: true
     },
-    movie_title: {
+    content: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    tmdb_id: {
+    review_likes: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      defaultValue: 0
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      }
+    },
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'movie',
+        key: 'id',
+      }
     }
   },
   {
