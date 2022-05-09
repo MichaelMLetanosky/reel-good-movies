@@ -6,7 +6,7 @@ const userData = require('./userData.json');
 const movieData = require('./movieData.json');
 const reviewData = require('./reviewData.json');
 const userMovieData = require('./userMovieData.json');
-const followedUserData = require('./userData.json');
+const followedUserData = require('./followedUserData.json');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
