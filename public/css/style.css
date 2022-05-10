@@ -13,6 +13,7 @@
     top: 30%;
     right: 25%;
     left: 25%;
+    width: fit-content;
 
 }
 .search-box-header{
@@ -65,4 +66,24 @@ h1{
 }
 .profile-lists{
     margin: 4%;
+}
+h2{
+    font-size: 200%;
+}
+form-group{
+    padding: 5%;
+}
+label{
+    display:block;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.svg-name{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
