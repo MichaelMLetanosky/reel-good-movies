@@ -12,7 +12,7 @@
   {
     "user_id": "3",
     "movie_id": "3",
-    "has_watched": false
+    "has_watched": true
   },
   {
     "user_id": "4",
