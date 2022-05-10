@@ -56,7 +56,7 @@ h1{
     height: 17rem;
     overflow: scroll;
   }
-  .review-element{
+.review-element{
     border-bottom: grey solid;
     padding-bottom: 1%;
 }
