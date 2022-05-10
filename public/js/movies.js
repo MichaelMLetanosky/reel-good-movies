@@ -45,3 +45,34 @@ const getMovieRepos = function (movieTitle) {
         };
 });
 }
+
+function getMovieDetails(data) {
+    const movieDetails = [];
+    movieData = data.forEach(function(movieTitle) {
+
+let apiUrl = `https://www.omdbapi.com/?apikey=1d2b52b9&t=${movieTitle}`
+
+fetch(apiUrl)
+    .then(function (response) {
+        if (response.ok) {
+            response.json().then(function (movie) {
+                //this could be a HTML card...an array of HTML 
+               let singleMovie = {
+                    title: movie.Title,
+                    releaseDate: movie.Released,
+                    rating: movie.Rated,
+                    director: movie.Director,
+                    runtime: movie.Runtime,
+                    plot: movie.Plot,
+                    actors: movie.Actors,
+                    poster: movie.Poster,
+                };
+                movieDetails.push(singleMovie);
+            });
+        };
+ 
+    });
+});
+console.log(movieDetails);
+console.log(typeof movieDetails);
+}
