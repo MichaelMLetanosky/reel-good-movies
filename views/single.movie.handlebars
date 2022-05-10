@@ -2,7 +2,7 @@
 <section class="all-movie-info">
   <div class="holds-movie-poster">
     <div class="movie-poster-div">
-      {{}}
+      {{mainPoster}}
       {{!-- <img src="../img/sample movie poster.jpg" class="img-movie-poster" alt="Sample movie poster" /> --}}
     </div>
   </div>
@@ -13,22 +13,22 @@
         <div class="card-content">
           <div class="content">
             <div class="movie-info-div">
-              <h1 class="movie-header-text">{{}}</h1>
+              <h1 class="movie-header-text">{{movieCardTitle}}</h1>
               <h2>Director:</h2>
-              <p class="card-text-info">{{}}</p>
+              <p class="card-text-info">{{movieDirector}}</p>
 
               <h2>Runtime:</h2>
-              <p class="card-text-info">{{}}</p>
+              <p class="card-text-info">{{movieRuntime}}</p>
               <h2>Plot:</h2>
               <p class="card-text-info">
-                {{}}
+                {{moviePlot}}
               </p>
               <h2>Actors:</h2>
               <p class="card-text-info">
-                {{}}
+                {{MovieActors}}
               </p>
               <h2>Ratings:</h2>
-              <h5>⭐{{}}</h5>
+              <h5>⭐{{MovieRatings}}</h5>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
 <!-- Movie review and slider -->
 <section class="holds-review-similar">
   <!-- Movie Reviews -->
-  {{> }}
+  {{> review-details}}
 
   <!-- Similar movies slider/static -->
   <section class="similar-movies">
@@ -72,20 +72,12 @@
 
         <!-- The slideshow -->
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            {{}}
-            {{!-- <img src="../img/sample movie poster.jpg" alt="Los Angeles" width="1100" height="500"> --}}
-          </div>
-          <div class="carousel-item">
-            {{}}
-            {{!-- <img src="../img/movie poster sample.jpg" alt="Chicago" width="1100" height="500"> --}}
-          </div>
-          <div class="carousel-item">
-            {{}}
-            {{!-- <img src="../img/sample movie poster.jpg" alt="New York" width="1100" height="500"> --}}
-          </div>
-        </div>
-
+          {{#each similarMoviePoster as |similarMovies|}}
+            <div class="carousel-item active">
+              <a href="/api/movie"><img src="{{moviePosterImg}}" alt="Similar movie poster" width="1100" height="500"></a>
+              {{!-- <img src="../img/sample movie poster.jpg" alt="Los Angeles" width="1100" height="500"> --}}
+            </div>
+          {{/each}}
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
           <span class="carousel-control-prev-icon"></span>
