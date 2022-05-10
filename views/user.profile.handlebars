@@ -1,0 +1,68 @@
+<nav class="level profile-info">
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Username:</p>
+            {{#each personalUserName as |username|}}
+                <p class="title">{{userNameProfile}}</p>
+            {{/each}}
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Number of Movies in our list</p>
+            {{#each numberMoviesList as |listItem|}}
+                <p class="title">{{numberMovies}}</p>
+            {{/each}}
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Follows</p>
+            {{#each userfollows as |follows|}}
+                <p class="title">{{profileFollows}}</p>
+            {{/each}}
+        </div>
+    </div>
+</nav>
+
+<section class="profile-lists">
+    <h3>Watch List</h3>
+    <div class="movie-profile-list">
+        <section class="movie-results">
+            <div class="movie-thumbnail">
+                {{#each watchListItem as |wantToWatch|}}
+                    <h2>{{movieTitleWantList}}</h2>
+                    <img src="{{movieUrlProfileList}}" class="img-small-poster" alt="similar movies" />
+                {{/each}}
+            </div>
+        </section>
+    </div>
+    <h3>Movies you watched</h3>
+    <div class="movie-profile-list">
+        <section class="movie-results">
+            <div class="movie-thumbnail">
+                {{#each movieUserWatched as |moviesWatched|}}
+                    <h2>{{movieTitleWatched}}</h2>
+                    <img src="{{movieUrlProfileWantList}}" class="img-small-poster" alt="similar movies" />
+                {{/each}}
+            </div>
+        </section>
+    </div>
+</section>
+
+<div class="container">
+    {{#each profileUserReview as |reviews|}}
+        {{> review-details}}
+    {{/each}}
+</div>
+
+{{!-- <div class="container">
+    <div class="notification is-light review-overflow">
+        <div class="review-element">
+            {{#each  as ||}}
+                <h3><a>{{movieTitle}}</a></h3>
+                <p>{{movieDes}}</p>
+            {{/each}}
+        </div>
+    </div>
+</div> --}}
