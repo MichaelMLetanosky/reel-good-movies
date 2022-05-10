@@ -1,18 +1,50 @@
 [
   {
     "movie_title": "Back to the Future",
-    "tmdb_id": "105"
+    "tmdb_id": "105",
+    "movie_poster": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "director": "Robert Zemeckis",
+    "runtime": "116 min",
+    "movie_rating": "PG",
+    "releaseDate": "03 Jul 1985",
+    "actors": "Michael J. Fox, Christopher Lloyd, Lea Thompson",
+    "plot": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
+    "review_ratings": "8.6"
   },
   {
     "movie_title": "La La Land",
-    "tmdb_id": "313369"
+    "tmdb_id": "313369",
+    "movie_poster": "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg",
+    "director": "Damien Chazelle",
+    "runtime": "128 min",
+    "movie_rating": "PG-13",
+    "releaseDate": "25 Dec 2016",
+    "actors": "Ryan Gosling, Emma Stone, Rosemarie DeWitt",
+    "plot": "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",
+    "review_ratings": "8.0"
   },
   {
     "movie_title": "Mulan",
-    "tmdb_id": "10674"
+    "tmdb_id": "10674",
+    "movie_poster": "https://m.media-amazon.com/images/M/MV5BODkxNGQ1NWYtNzg0Ny00Yjg3LThmZTItMjE2YjhmZTQ0ODY5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "director": "Tony Bancroft, Barry Cook",
+    "runtime": "88 min",
+    "movie_rating": "G",
+    "releaseDate": "19 Jun 1998",
+    "actors": "Ming-Na Wen, Eddie Murphy, BD Wong",
+    "plot": "To save her father from death in the army, a young maiden secretly goes in his place and becomes one of China's greatest heroines in the process.",
+    "review_ratings": "7.6"
   },
   {
     "movie_title": "Mad Max: Fury Road",
-    "tmdb_id": "76341"
+    "tmdb_id": "76341",
+    "movie_poster": "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    "director": "George Miller",
+    "runtime": "120 min",
+    "movie_rating": "R",
+    "releaseDate": "15 May 2015",
+    "actors": "Tom Hardy, Charlize Theron, Nicholas Hoult",
+    "plot": "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
+    "review_ratings": "8.1"
   }
 ]
