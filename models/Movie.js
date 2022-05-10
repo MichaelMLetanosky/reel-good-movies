@@ -19,7 +19,41 @@ Movie.init(
     tmdb_id: {
       type: DataTypes.INTEGER,
       allowNull: false
-    }
+    },
+    movie_poster: {
+      //this will be a URL 
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    director: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    runtime: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    movie_rating: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    releaseDate: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    actors: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    plot: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    review_ratings: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+
   },
   {
     sequelize,
