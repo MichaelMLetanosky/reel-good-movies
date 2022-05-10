@@ -1,0 +1,40 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+
+.card{
+    margin: 3rem;
+}
+
+
+.holds-all-search{
+    display: flex;
+    flex-direction: row;
+}
+
+.movie-search-info{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.movie-search-poster{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+.search-poster{
+    height: auto;
+    width: 150px;
+}
+
+.card-text{
+    font-size: larger;
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        margin: 1rem;
+        background-color: black;
+    }
+}
