@@ -1,9 +1,19 @@
 const router = require('express').Router();
+const { User, Movie, Review, UserMovie, FollowedUser } = require('../models');
+const withAuth = require('../utils/auth');
+
 
 // add the withAuth when we have it properly set up
 //const withAuth = require('../utils/auth');
 
 
+router.get('/', async (req, res) => {
+  try {
+    res.render('homepage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/', async (req, res) => {
   
@@ -45,3 +55,4 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
