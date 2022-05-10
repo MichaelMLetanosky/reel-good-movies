@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const { Movie, Review } = require('../../models');
+const { Review, User, Movie } = require('../../models');
 
-// The `/api/movies` endpoint
+// The `/api/reviews` endpoint
 
-// get all movies
+// get all reviews
 router.get('/', async (req, res) => {
     try {
-        const movieData = await Movie.findAll({
-            include: [{ model: Review }]
+        const movieData = await Review.findAll({
+            include: [{ model: User, attributes: ['username'] }, { model: Movie, attributes: ['movie_title']}]
         });
         res.status(200).json(movieData);
     } catch (err) {
@@ -18,12 +18,12 @@ router.get('/', async (req, res) => {
 // get one movie
 router.get('/:id', async (req, res) => {
     try {
-        const movieData = await Movie.findByPk(req.params.id, {
-            include: [{ model: Review }]
+        const movieData = await Review.findByPk(req.params.id, {
+            include: [{ model: User, attributes: ['username'] }, { model: Movie, attributes: ['movie_title']}]
         });
 
         if (!movieData) {
-            res.status(404).json({ message: 'No movie found with this id!' });
+            res.status(404).json({ message: 'No review found with this id!' });
             return;
         }
 
@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
 // Post movie to db
 router.post('/', async (req, res) => {
     try {
-        const movieData = await Movie.create(req.body);
+        const movieData = await Review.create(req.body);
 
         res.status(200).json(movieData);
     } catch (err) {
@@ -48,10 +48,12 @@ router.post('/', async (req, res) => {
 // Updates movie based on its id
 router.put('/:id', async (req, res) => {
     try {
-        const movieData = await Movie.update(
+        const movieData = await Review.update(
             {
-                movie_title: req.body.movie_title,
-                tmdb_id: req.body.tmdb_id,
+                content: req.body.content,
+                review_likes: req.body.review_likes,
+                user_id: req.body.user_id,
+                movie_id: req.body.movie_id
             },
             {
                 where: {
@@ -61,7 +63,7 @@ router.put('/:id', async (req, res) => {
         );
 
         if (!movieData) {
-            res.status(404).json({ message: 'No movie found with this id!' });
+            res.status(404).json({ message: 'No review found with this id!' });
             return;
         }
 
@@ -74,14 +76,14 @@ router.put('/:id', async (req, res) => {
 // Delete movie from db by ID
 router.delete('/:id', async (req, res) => {
     try {
-        const movieData = await Movie.destroy({
+        const movieData = await Review.destroy({
             where: {
                 id: req.params.id,
             },
         });
 
         if (!movieData) {
-            res.status(404).json({ message: 'No movie found with this id!' });
+            res.status(404).json({ message: 'No review found with this id!' });
             return;
         }
 

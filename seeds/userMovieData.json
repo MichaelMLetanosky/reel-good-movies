@@ -1,22 +1,27 @@
 [
   {
     "user_id": "1",
-    "movie_id": "2"
+    "movie_id": "2",
+    "has_watched": false
   },
   {
     "user_id": "2",
-    "movie_id": "4"
+    "movie_id": "4",
+    "has_watched": true
   },
   {
     "user_id": "3",
-    "movie_id": "3"
+    "movie_id": "3",
+    "has_watched": false
   },
   {
     "user_id": "4",
-    "movie_id": "3"
+    "movie_id": "3",
+    "has_watched": false
   },
   {
     "user_id": "2",
-    "movie_id": "2"
+    "movie_id": "2",
+    "has_watched": true
   }
 ]

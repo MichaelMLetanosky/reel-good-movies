@@ -27,6 +27,11 @@ UserMovie.init(
         model: 'movie',
         key: 'id',
       }
+    },
+    has_watched: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      default: false
     }
   },
   {
