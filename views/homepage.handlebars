@@ -1,3 +1,21 @@
-{{#each galleries as |gallery|}}
-{{> gallery-details}}
-{{/each}}
+<!--HOMEPAGE PICTURE AND SEARCH BOX-->
+    <main>
+      <div class="box center-box">
+        <h1 class="search-box-header">Search for a movie</h1>
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="search" placeholder="Search">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-success" id="user-movie-search">Search</button>
+          </p>
+        </div>
+      </div>
+      <!--potentially different pictures that we have in our database?-->
+      {{!-- <img src="./movie-theater1.webp" alt="placeholder"> --}}
+    </main>
