@@ -31,40 +31,27 @@
     </div>
     <!-- If they havent logged in yet-->
     {{#if loggedIn}}
-      <div class="navbar-end">
+     <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
+          <a class="button is-dark" id="logout">
+            Log out
           </a>
-          <a class="button is-dark">
+          </div>
+        </div>
+      </div>
+
+    {{else}}
+          <!--If they have logged in already-->
+     <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+          <a class="button is-dark" href="/login">
             Log in
           </a>
           </div>
         </div>
       </div>
-    {{else}}
-          <!--If they have logged in already-->
-      <div class="navbar-item has-dropdown is-hoverable">
-         <a class="navbar-link">
-             {{username}}
-         </a>
-         <div class="navbar-dropdown is-right">
-           <a class="navbar-item">
-              My Movie list
-           </a>
-           <a class="navbar-item">
-              Movie reviews
-           </a>
-           <a class="navbar-item">
-              My Movie Queue
-            </a>
-            <a class="navbar-item" id="logout">
-              Logout
-            </a>
-         </div>
-      </div>
-  
     {{/if}}
   </nav>
   <main>

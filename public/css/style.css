@@ -7,16 +7,26 @@
 
 }
 
+.center-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*styling for homepage searchbox*/
 .center-box{
-    position: absolute;
+    /* position: absolute;
     top: 30%;
     right: 25%;
-    left: 25%;
+    left: 25%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-width: fit-content;
-    padding:0
-
+    width: 50%;
+    padding: .5rem;
 }
+
 .search-box-header{
     font-size: 200%;
     font-weight: 500;
@@ -53,6 +63,9 @@ h1{
     margin-top: 10%;
     margin-bottom: 10%;
 }
+.input{
+    min-width: 30rem;
+}
 
 .review-overflow {
     height: 17rem;
@@ -87,6 +100,7 @@ label{
     display: flex;
     justify-content: center;
     padding: 1rem;
+    width: 100%;
 }
 .login-form{
     padding-right: 3%;
@@ -94,4 +108,57 @@ label{
 .login-and-Signup{
     justify-content: space-evenly;
     display: flex;
+}
+
+/* Responsive code */
+.navbar{
+    display: flex;
+    padding: 1rem;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar-end{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 860px){
+    .input{
+        min-width: 5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .input{
+       display: none;
+    }
+}
+@media screen and (max-width: 400px){
+    .input{
+       /* display: none; */
+       min-width: 2rem;
+    }
+    nav {
+        padding: 0;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar-brand{
+        justify-content: center;
+        
+    }
+    
+    .navbar-end{
+        justify-content: center;
+        margin: auto;
+    }
 }
