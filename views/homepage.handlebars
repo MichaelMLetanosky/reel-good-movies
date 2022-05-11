@@ -37,24 +37,26 @@
           <path d="M1209.4 50.0455L1198.56 53.1136C1197.88 51.3068 1196.87 49.5511 1195.54 47.8466C1194.25 46.108 1192.47 44.6761 1190.22 43.5511C1187.97 42.4261 1185.09 41.8636 1181.58 41.8636C1176.78 41.8636 1172.77 42.9716 1169.57 45.1875C1166.39 47.3693 1164.81 50.1477 1164.81 53.5227C1164.81 56.5227 1165.9 58.892 1168.08 60.6307C1170.26 62.3693 1173.67 63.8182 1178.31 64.9773L1189.97 67.8409C1196.99 69.5455 1202.22 72.1534 1205.67 75.6648C1209.11 79.142 1210.83 83.625 1210.83 89.1136C1210.83 93.6136 1209.54 97.6364 1206.95 101.182C1204.39 104.727 1200.81 107.523 1196.21 109.568C1191.61 111.614 1186.25 112.636 1180.15 112.636C1172.14 112.636 1165.51 110.898 1160.26 107.42C1155.01 103.943 1151.68 98.8636 1150.29 92.1818L1161.74 89.3182C1162.83 93.5455 1164.89 96.7159 1167.93 98.8295C1171 100.943 1175 102 1179.95 102C1185.57 102 1190.04 100.807 1193.34 98.4205C1196.68 96 1198.36 93.1023 1198.36 89.7273C1198.36 87 1197.4 84.7159 1195.49 82.875C1193.58 81 1190.65 79.6023 1186.7 78.6818L1173.61 75.6136C1166.41 73.9091 1161.13 71.267 1157.75 67.6875C1154.41 64.0739 1152.74 59.5568 1152.74 54.1364C1152.74 49.7045 1153.99 45.7841 1156.47 42.375C1159 38.9659 1162.42 36.2898 1166.75 34.3466C1171.12 32.4034 1176.06 31.4318 1181.58 31.4318C1189.36 31.4318 1195.46 33.1364 1199.89 36.5454C1204.36 39.9545 1207.53 44.4545 1209.4 50.0455Z" stroke="black" stroke-width="6" mask="url(#path-1-outside-1_2_6)"/>
           </svg>  
       </div>
-
+      <form id="movie-form">
       <div class="box center-box">
         <h1 class="search-box-header">Search for a movie</h1>
         <div class="field">
           <p class="control has-icons-left has-icons-right">
-            <input class="input" type="search" placeholder="Search">
+            <input name="movie-title" id="movie-title" class="input" type="search" placeholder="Search">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
           </p>
         </div>
         <div class="field">
-          <p class="control">
-            <button class="button is-success" id="user-movie-search">Search</button>
+          <p class="control">         
+            <button type="submit" class="button is-success" id="user-movie-search">Search</button>
           </p>
         </div>
       </div>
+     </form>
       <!--potentially different pictures that we have in our database?-->
       {{!-- <img src="./movie-theater1.webp" alt="placeholder"> --}}
     </main>
 <script src="../js/animeteamname.js"></script>
+<script src="../js/movies.js"></script>
