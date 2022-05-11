@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:username', async (req, res) => {
+router.get('/:username', withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.params.username},
