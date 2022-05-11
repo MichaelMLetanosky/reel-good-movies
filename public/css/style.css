@@ -13,7 +13,8 @@
     top: 30%;
     right: 25%;
     left: 25%;
-    width: fit-content;
+    min-width: fit-content;
+    padding:0
 
 }
 .search-box-header{
@@ -86,4 +87,11 @@ label{
     display: flex;
     justify-content: center;
     padding: 1rem;
+}
+.login-form{
+    padding-right: 3%;
+}
+.login-and-Signup{
+    justify-content: space-evenly;
+    display: flex;
 }
