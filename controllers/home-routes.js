@@ -34,11 +34,11 @@ router.get('/login', async (req, res) => {
   }
 });
 
-router.get('/username/:username', withAuth, async (req, res) => {
+router.get('/username/:username', async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.params.username},
-      include: [{ model: Review }, { model: Movie }, { model: User, as: 'followee' }]
+      include: [{ model: Review, include: [{ model: Movie}, { model: User }] }, { model: Movie }, { model: User, as: 'followee' }]
     });
 
     const dashboard = userData.get({ plain: true });
