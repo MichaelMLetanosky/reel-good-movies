@@ -11,13 +11,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 /*styling for homepage searchbox*/
-.center-box{
-    /* position: absolute;
+.login-center-box{
+    margin-top: 2rem;
+}
+
+.homepage-box{
+    margin-top: 2rem;
+}
+
+.login-center-box{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 5rem;
+}
+
+.login-card{
+    padding-inline: 1rem;
+}
+
+/* .center-box{
+    position: absolute;
     top: 30%;
     right: 25%;
-    left: 25%; */
+    left: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +45,7 @@
     min-width: fit-content;
     width: 50%;
     padding: .5rem;
-}
+} */
 
 .search-box-header{
     font-size: 200%;
@@ -84,8 +104,15 @@ h1{
 h2{
     font-size: 200%;
 }
-form-group{
-    padding: 5%;
+.form-input{
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+.form-group-btn{
+    display: flex;
+    justify-content: center;
+    padding: .5rem;
 }
 label{
     display:block;
@@ -105,9 +132,10 @@ label{
 .login-form{
     padding-right: 3%;
 }
+
 .login-and-Signup{
-    justify-content: space-evenly;
     display: flex;
+    justify-content: space-evenly;
 }
 
 /* Responsive code */
@@ -127,19 +155,30 @@ label{
     align-items: center;
     margin-left: auto;
 }
+@media screen and (max-width: 900px){
+    .login-center-box{
+        width: 80%;
+    }
+}
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 560px){
+    .login-and-Signup{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 780px){
     .input{
         min-width: 5rem;
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 490px){
     .input{
        display: none;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 350px){
     .input{
        /* display: none; */
        min-width: 2rem;
