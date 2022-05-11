@@ -15,9 +15,8 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    // TMDB id to make fetching additional information easier
-    tmdb_id: {
-      type: DataTypes.INTEGER,
+    imdbID: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     movie_poster: {
