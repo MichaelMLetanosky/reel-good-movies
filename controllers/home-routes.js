@@ -17,12 +17,15 @@ router.get('/', async (req, res) => {
 
 router.get('/:username', async (req, res) => {
   try {
-    const userData = await User.findAll({
+    const userData = await User.findOne({
       where: { username: req.params.username},
-      include: [{ model: Review }, { model: Movie }, { model: User, as: 'follower' }]
+      include: [{ model: Review }, { model: Movie }, { model: User, as: 'followee' }]
     });
 
-    res.status(200).json(userData);
+    const dashboard = userData.get({ plain: true });
+
+    // res.status(200).json(dashboard)
+    res.render('userprofile', { ...dashboard });
   } catch (err) {
     res.status(500).json(err);
   }
