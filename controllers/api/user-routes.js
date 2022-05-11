@@ -28,8 +28,7 @@ router.post('/login', async (req, res) => {
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
-      },
-      attributes: ['username', 'email', 'password']
+      }
     });
 
     if (!dbUserData) {
@@ -49,7 +48,6 @@ router.post('/login', async (req, res) => {
     }
 
     let requestUser = dbUserData.dataValues.username
-    console.log(requestUser)
 
     req.session.save(() => {
       req.session.loggedIn = true;
