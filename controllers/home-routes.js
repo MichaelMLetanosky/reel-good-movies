@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 //const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     res.render('homepage');
   } catch (err) {
@@ -15,7 +15,21 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get('/:username', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findOne({
+      where: { username: req.params.username},
+      include: [{ model: Review }, { model: Movie }, { model: User, as: 'followee' }]
+    });
+
+    const dashboard = userData.get({ plain: true });
+
+    // res.status(200).json(dashboard)
+    res.render('userprofile', { ...dashboard });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
   
 /*
 --------------GALLERY EXAMPLE
@@ -43,7 +57,6 @@ router.get('/', async (req, res) => {
   }
 */
 
-});
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {

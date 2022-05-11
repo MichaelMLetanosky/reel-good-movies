@@ -40,10 +40,14 @@ User.belongsToMany(Movie, {
 
 User.belongsToMany(User, {
     as: "follower",
-    through: {
-        model: FollowedUser,
-        unique: false
-    }
+    foreignKey: 'followee_id',
+    through: FollowedUser
+});
+
+User.belongsToMany(User, {
+    as: "followee",
+    foreignKey: 'follower_id',
+    through: FollowedUser
 });
 
 

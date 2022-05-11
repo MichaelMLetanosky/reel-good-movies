@@ -2,24 +2,20 @@
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Username:</p>
-            {{#each personalUserName as |username|}}
-                <p class="title">{{userNameProfile}}</p>
-            {{/each}}
+                <p class="title">{{username}}</p>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Number of Movies in our list</p>
-            {{#each numberMoviesList as |listItem|}}
-                <p class="title">{{numberMovies}}</p>
-            {{/each}}
+                <p class="title">{{movies.length}}</p>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Follows</p>
-            {{#each userfollows as |follows|}}
-                <p class="title">{{profileFollows}}</p>
+            {{#each followee as |follow|}}
+                <p class="title">{{username}}</p>
             {{/each}}
         </div>
     </div>
@@ -30,9 +26,9 @@
     <div class="movie-profile-list">
         <section class="movie-results">
             <div class="movie-thumbnail">
-                {{#each watchListItem as |wantToWatch|}}
-                    <h2>{{movieTitleWantList}}</h2>
-                    <img src="{{movieUrlProfileList}}" class="img-small-poster" alt="similar movies" />
+                {{#each movies as |wantToWatch|}}
+                    <h2>{{movie_title}}</h2>
+                    <img src="{{movie_poster}}" class="img-small-poster" alt="similar movies" />
                 {{/each}}
             </div>
         </section>
@@ -41,9 +37,9 @@
     <div class="movie-profile-list">
         <section class="movie-results">
             <div class="movie-thumbnail">
-                {{#each movieUserWatched as |moviesWatched|}}
-                    <h2>{{movieTitleWatched}}</h2>
-                    <img src="{{movieUrlProfileWantList}}" class="img-small-poster" alt="similar movies" />
+                {{#each movies as |wantToWatch|}}
+                    <h2>{{movie_title}}</h2>
+                    <img src="{{movie_poster}}" class="img-small-poster" alt="similar movies" />
                 {{/each}}
             </div>
         </section>
@@ -51,7 +47,7 @@
 </section>
 
 <div class="container">
-    {{#each profileUserReview as |reviews|}}
+    {{#each reviews as |review|}}
         {{> review-details}}
     {{/each}}
 </div>
