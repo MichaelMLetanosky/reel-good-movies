@@ -14,6 +14,15 @@ router.get('/', async (req, res) => {
       res.redirect(`/username/${req.session.user}`);
       return;
     }
+    if(req.session.loggedIn === undefined){
+      response = await fetch('/api/users/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+    
+      if (response.ok) {
+        document.location.replace('/');
+    }
     res.render('homepage', {loggedIn: req.session.loggedIn});
 
   } catch (err) {
