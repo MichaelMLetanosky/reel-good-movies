@@ -12,8 +12,9 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
-      res.status(200).json(dbUserData);
+      res
+        .status(200)
+        .json({ user: dbUserData, message: 'You are now logged in!' });
     });
   } catch (err) {
     console.log(err);
@@ -28,7 +29,7 @@ router.post('/login', async (req, res) => {
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
-      },
+      }
     });
 
     if (!dbUserData) {
@@ -47,12 +48,13 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    let requestUser = dbUserData.dataValues.username
+
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user = requestUser
 
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+      res.status(200).json(dbUserData);
     });
   } catch (err) {
     console.log(err);
