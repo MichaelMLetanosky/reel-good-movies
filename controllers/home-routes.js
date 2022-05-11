@@ -35,6 +35,11 @@ router.get('/username/:username', withAuth, async (req, res) => {
       include: [{ model: Review }, { model: Movie }, { model: User, as: 'followee' }]
     });
 
+    // const reviewData = await Review.findall({
+    //   where: {user_id: userData.id},
+    //   include:[{model: Movie}]
+    // })
+    
     const dashboard = userData.get({ plain: true });
 
     // res.status(200).json(dashboard)
