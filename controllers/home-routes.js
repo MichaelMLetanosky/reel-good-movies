@@ -9,7 +9,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    res.render('homepage', {loggedIn: req.session.loggedIn});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -17,10 +17,10 @@ router.get('/', async (req, res) => {
 
 router.get('/login', async (req, res) => {
   try {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
+    // if (req.session.loggedIn) {
+    //   res.redirect('/');
+    //   return;
+    // }
   
     res.render('login');
   } catch (err) {
@@ -38,7 +38,7 @@ router.get('/username/:username', withAuth, async (req, res) => {
     const dashboard = userData.get({ plain: true });
 
     // res.status(200).json(dashboard)
-    res.render('userprofile', { ...dashboard });
+    res.render('userprofile', { ...dashboard, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }

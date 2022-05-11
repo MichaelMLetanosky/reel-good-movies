@@ -31,24 +31,14 @@
     </div>
     <!-- If they havent logged in yet-->
     {{#if loggedIn}}
-     <div class="navbar-item has-dropdown is-hoverable">
-         <a class="navbar-link">
-             {{username}}
-         </a>
-         <div class="navbar-dropdown is-right">
-           <a class="navbar-item">
-              My Movie list
-           </a>
-           <a class="navbar-item">
-              Movie reviews
-           </a>
-           <a class="navbar-item">
-              My Movie Queue
-            </a>
-            <a class="navbar-item" id="logout">
-              Logout
-            </a>
-         </div>
+     <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+          <a class="button is-dark" id="logout">
+            Log out
+          </a>
+          </div>
+        </div>
       </div>
 
     {{else}}
@@ -56,7 +46,7 @@
      <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-          <a class="button is-dark">
+          <a class="button is-dark" href="/login">
             Log in
           </a>
           </div>
