@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 //const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     res.render('homepage');
   } catch (err) {
@@ -15,7 +15,20 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get('/:username'), withAuth, async (req, res) => {
+  try {
+    const requestedUser = req.param.username
+
+    const movieData = await User.findAll({
+      where: { username: requestedUser},
+      include: [{ model: Review }]
+    });
+
+    res.render('homepage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
   
 /*
 --------------GALLERY EXAMPLE
@@ -43,7 +56,6 @@ router.get('/', async (req, res) => {
   }
 */
 
-});
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
