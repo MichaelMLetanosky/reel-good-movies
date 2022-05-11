@@ -5,7 +5,7 @@ const { Movie, Review } = require('../../models');
 
 // get movie search results
 //this will pull from our movie database and populate our search results handlebars
-router.get('/', async (req, res) => {
+router.get('/movies', async (req, res) => {
     try {
         const movieData = await Movie.findAll({
             attributes: ['title', 'releaseDate', 'movie_rating', 'movie_poster']
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 });
 
 // get one movie from the movie database and populate our single movie page
-router.get('/:id', async (req, res) => {
+router.get('/movies/:id', async (req, res) => {
     try {
         const movieData = await Movie.findByPk(req.params.id, {
             include: [{ model: Review }],
