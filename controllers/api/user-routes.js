@@ -29,6 +29,7 @@ router.post('/login', async (req, res) => {
       where: {
         email: req.body.email,
       },
+      attributes: ['username', 'email', 'password']
     });
 
     if (!dbUserData) {
@@ -47,12 +48,14 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    let requestUser = dbUserData.dataValues.username
+    console.log(requestUser)
+
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user = requestUser
 
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+      res.status(200).json(dbUserData);
     });
   } catch (err) {
     console.log(err);
