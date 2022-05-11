@@ -7,16 +7,26 @@
 
 }
 
+.center-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*styling for homepage searchbox*/
 .center-box{
-    position: absolute;
+    /* position: absolute;
     top: 30%;
     right: 25%;
-    left: 25%;
+    left: 25%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-width: fit-content;
-    padding:0
-
+    width: 50%;
+    padding: .5rem;
 }
+
 .search-box-header{
     font-size: 200%;
     font-weight: 500;
@@ -90,6 +100,7 @@ label{
     display: flex;
     justify-content: center;
     padding: 1rem;
+    width: 100%;
 }
 .login-form{
     padding-right: 3%;
