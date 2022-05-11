@@ -15,7 +15,20 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:username', withAuth, async (req, res) => {
+router.get('/login', async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/username/:username', withAuth, async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { username: req.params.username},
@@ -31,41 +44,4 @@ router.get('/:username', withAuth, async (req, res) => {
   }
 });
   
-/*
---------------GALLERY EXAMPLE
-  try {
-    const dbGalleryData = await Gallery.findAll({
-      include: [
-        {
-          model: Painting,
-          attributes: ['filename', 'description'],
-        },
-      ],
-    });
-
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-
-    res.render('homepage', {
-      galleries,
-      loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-*/
-
-
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('login');
-});
-
 module.exports = router;
-
