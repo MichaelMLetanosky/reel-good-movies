@@ -15,16 +15,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:username'), withAuth, async (req, res) => {
+router.get('/:username', async (req, res) => {
   try {
-    const requestedUser = req.param.username
-
-    const movieData = await User.findAll({
-      where: { username: requestedUser},
-      include: [{ model: Review }]
+    const userData = await User.findAll({
+      where: { username: req.params.username},
+      include: [{ model: Review }, { model: Movie }, { model: User, as: 'follower' }]
     });
 
-    res.render('homepage');
+    res.status(200).json(userData);
   } catch (err) {
     res.status(500).json(err);
   }

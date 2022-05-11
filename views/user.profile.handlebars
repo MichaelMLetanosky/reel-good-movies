@@ -2,17 +2,13 @@
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Username:</p>
-            {{#each personalUserName as |username|}}
-                <p class="title">{{userNameProfile}}</p>
-            {{/each}}
+                <p class="title">{{username}}</p>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Number of Movies in our list</p>
-            {{#each numberMoviesList as |listItem|}}
-                <p class="title">{{numberMovies}}</p>
-            {{/each}}
+                <p class="title">{{movies.length}}</p>
         </div>
     </div>
     <div class="level-item has-text-centered">
