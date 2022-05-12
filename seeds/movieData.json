@@ -1,7 +1,7 @@
 [
   {
     "movie_title": "Back to the Future",
-    "imdbID": "tt0088763",
+    "imdbId": "tt0088763",
     "movie_poster": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     "director": "Robert Zemeckis",
     "runtime": "116 min",
@@ -13,7 +13,7 @@
   },
   {
     "movie_title": "La La Land",
-    "imdbID": "tt3783958",
+    "imdbId": "tt3783958",
     "movie_poster": "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg",
     "director": "Damien Chazelle",
     "runtime": "128 min",
@@ -25,7 +25,7 @@
   },
   {
     "movie_title": "Mulan",
-    "imdbID": "tt0120762",
+    "imdbId": "tt0120762",
     "movie_poster": "https://m.media-amazon.com/images/M/MV5BODkxNGQ1NWYtNzg0Ny00Yjg3LThmZTItMjE2YjhmZTQ0ODY5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     "director": "Tony Bancroft, Barry Cook",
     "runtime": "88 min",
@@ -37,7 +37,7 @@
   },
   {
     "movie_title": "Mad Max: Fury Road",
-    "imdbID": "tt1392190",
+    "imdbId": "tt1392190",
     "movie_poster": "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
     "director": "George Miller",
     "runtime": "120 min",
