@@ -8,4 +8,5 @@ router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
 router.use('/search', searchRoutes);
 
+
 module.exports = router;

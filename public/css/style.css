@@ -230,7 +230,20 @@ label {
   font-size: 2.5rem;
   margin: 0;
 }
+/* 404 img */
+.card-404{
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  min-width: 70%;
+}
 
+.card-404-card{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
+/*  */
 @media screen and (max-width: 1050px) {
   .img-small-poster {
     max-width: 80%;
