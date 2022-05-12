@@ -10,10 +10,16 @@ router.post('/', async (req, res) => {
       password: req.body.password,
     });
 
+    const newUserData = await User.findOne({
+      where: {
+        email: req.body.email,
+      }
+    });
+
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.user = requestUser
-      req.session.userId = requestUserId;
+      req.session.user = newUserData.dataValues.username;
+      req.session.userId = newUserData.dataValues.id;
       
       res
         .status(200)
