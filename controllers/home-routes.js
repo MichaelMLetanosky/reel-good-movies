@@ -8,6 +8,7 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
+  console.log("hello")
   try {
 
     if (req.session.loggedIn) {
