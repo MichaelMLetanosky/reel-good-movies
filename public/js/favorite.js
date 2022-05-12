@@ -2,11 +2,12 @@ const favoriteMovie = async (event) => {
     event.preventDefault();
 
     const favoriteMovie = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-    console.log(favoriteMovie)
+    const favoriteMovieReform = favoriteMovie.replace(/%20/g," ")
+    console.log(favoriteMovieReform)
 
     const response = await fetch('/api/favorite', {
       method: 'POST',
-      body: JSON.stringify({ favoriteMovie }),
+      body: JSON.stringify({ favoriteMovieReform }),
       headers: { 'Content-Type': 'application/json' },
     });
   };

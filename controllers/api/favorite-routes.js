@@ -6,8 +6,9 @@ const { UserMovie, Movie } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         console.log('finding movie')
+        console.log(req.body.favoriteMovieReform)
         const movieData = await Movie.findOne({
-            where: { movie_title: req.body.favoriteMovie}
+            where: { movie_title: req.body.favoriteMovieReform}
         })
         console.log(movieData)
         let favoriteObject = {
