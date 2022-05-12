@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const session = require('express-session');
 const { User, Movie, Review, UserMovie, FollowedUser } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -41,11 +42,14 @@ router.get('/username/:username', async (req, res) => {
       where: { username: req.params.username},
       include: [{ model: Review, include: [{ model: Movie}, { model: User }] }, { model: Movie }, { model: User, as: 'followee' }]
     });
-
+    let differentUser = false
     const dashboard = userData.get({ plain: true });
-
+    if(req.params.username !== req.session.user){
+      differentUser = true
+    }
+    console.log(differentUser)
     // res.status(200).json(dashboard)
-    res.render('userprofile', { ...dashboard, loggedIn: req.session.loggedIn });
+    res.render('userprofile', { ...dashboard, differentUser, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }

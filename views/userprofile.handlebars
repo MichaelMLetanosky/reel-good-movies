@@ -3,7 +3,9 @@
         <div>
             <p class="heading">Username:</p>
                 <p class="title">{{username}}</p>
+                {{#if differentUser}}
                 <button class="button is-dark" id="follow-button">Follow</button>
+                {{/if}}
         </div>
     </div>
     <div class="level-item has-text-centered">
