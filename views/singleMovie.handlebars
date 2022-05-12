@@ -1,4 +1,7 @@
-
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+{{!-- Custom --}}
+<link rel="stylesheet" href="../public/css/result.sample.css">
 <section class="all-movie-info">
   <div class="holds-movie-poster">
     <div class="movie-poster-div">
@@ -13,7 +16,7 @@
         <div class="card-content">
           <div class="content">
             <div class="movie-info-div">
-              <h1 class="movie-header-text">{{singleMovie.title}}</h1>
+              <h1 class="movie-header-text" id="get-title-name">{{singleMovie.movie_title}}</h1>
               <h2>Director:</h2>
               <p class="card-text-info">{{singleMovie.director}}</p>
 
@@ -28,7 +31,7 @@
                 {{singleMovie.actors}}
               </p>
               <h2>Ratings:</h2>
-              <h5>⭐{{singleMovie.review_rating}}</h5>
+              <h5>⭐{{singleMovie.review_ratings}}</h5>
             </div>
           </div>
         </div>
@@ -36,6 +39,8 @@
     </div>
   </div>
 </section>
+<p style="display: none;" id="ugly-userId">{{userId}}</p>
+<p style="display: none;" id="ugly-movieId">{{movieId}}</p>
 
 <!-- Movie result buttons -->
 <div class="movie-buttons">
@@ -49,50 +54,14 @@
 </div>
 <!-- Movie review and slider -->
 <section class="holds-review-similar">
-  <section class="review-half-div-single">
-    <h1 class="movie-header-text">User Reviews</h1>
-  <hr />
   <!-- Movie Reviews -->
-  {{> review-details}}
-  </section>
-  
+  {{#each reviews as |review|}}
+       {{> review-details}}
+     {{/each}}
 
   <!-- Similar movies slider/static -->
-  {{!-- <section class="similar-movies">
-    <h1 class="movie-header-text">Similar Movies</h1>
-    <hr />
-    <div class="carousel-div">
-      <div id="demo" class="carousel slide" data-ride="carousel">
-
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          {{#each similarMoviePoster}}
-            <div class="carousel-item active">
-              <img src="{{movie_poster}}" alt="Similar movie poster" width="1100" height="500">
-              <img src="../public/img/v2 poster.png" alt="V2 Poster" width="1100" height="500">
-              <img src="../public/img/v2 poster.png" alt="V2 Poster" width="1100" height="500">
-              <img src="../public/img/v2 poster.png" alt="V2 Poster" width="1100" height="500">
-            </div>
-          {{/each}}
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div>
-    </div>
-  </section> --}}
+ 
 </section>
-<p id="ugly-userId"style="display: none;" value="{{userId}}">{{userId}}</p>
 
 <!-- Modal for Review -->
 <div class="modal" id="modal-js-example">
@@ -107,10 +76,10 @@
       <h2>What would you rate this movie?</h2>
       <div class="container">
         <div class="feedback">
-          <div class="rating review-like" id="review-like">
+          <div class="rating">
             <input type="radio" name="rating" id="rating-5" value="5"/>
             <label for="rating-5"></label>
-            <input type="radio" name="rating" id="rating-4" value="4" />
+            <input type="radio" name="rating" id="rating-4" value="4"/>
             <label for="rating-4"></label>
             <input type="radio" name="rating" id="rating-3" value="3"/>
             <label for="rating-3"></label>
@@ -287,12 +256,11 @@
   </div>
 </div>
 
-<!--<!-- Bootstrap and other party JS -->
+<!-- Bootstrap and other party JS -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Modal JS -->
   <script src="../js/modalreview.js"></script>
 <script src="../js/pagination.results.js"></script>
-<script src="../js/addReview.js"></script>-->
-
+<script src="../js/addReview.js"></script>
