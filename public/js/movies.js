@@ -1,22 +1,21 @@
-let movieInputEl = document.getElementById('movie-title');
-let movieFormEl = document.getElementById('movie-form');
-
 const movieSearchHandler = function (event) {
     event.preventDefault();
 
-    var movieTitle = movieInputEl.value.trim();
+    var movieTitle = document.getElementById("movie-name").value.trim();
+    console.log(movieTitle)
     if (movieTitle) {
-        getMovieRepos(movieTitle);
+        document.location.replace(`/search/${movieTitle}`)
     } else {
         alert('Please enter a movie title.');
     }
 };
 
-movieFormEl.addEventListener('submit', movieSearchHandler);
+document.getElementById('movie-form').addEventListener('click', movieSearchHandler);
 
 
 
-//appending to JSOM file
+
+//appending to JSON file
 function appendingDoom(fileName, data) {
     fs.appendFile(fileName, data, (err) => {
         if (err) {
@@ -24,3 +23,17 @@ function appendingDoom(fileName, data) {
         }
     });
 }
+
+const movieHomepageSearchHandler = function (event) {
+    event.preventDefault();
+
+    var movieTitle = document.getElementById("movie-title").value.trim();
+    console.log(movieTitle)
+    if (movieTitle) {
+        document.location.replace(`/search/${movieTitle}`)
+    } else {
+        alert('Please enter a movie title.');
+    }
+};
+
+document.getElementById('user-movie-search').addEventListener('click', movieHomepageSearchHandler);
