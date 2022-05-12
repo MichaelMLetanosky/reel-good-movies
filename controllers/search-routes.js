@@ -18,13 +18,15 @@ router.get('/:movieTitle', (req, res) => {
                 plot: response.data.Plot,
                 review_rating: response.data.imdbRating,
             }
+            userId = req.session.userId
+            console.log(userId)
             // console.log(movieTitles);
             // res.status(200).json(data);
             // const sadMovies = getMovieDetails(movieTitlesArray);
             // let movieResults = movieTitlesArray.map(getMovieDetails())
             // console.log(movieResults);
             // console.log(movieResults);
-            res.render('singleMovie', singleMovie);
+            res.render('singleMovie', {singleMovie, userId});
             // return movieResults;
         });
 

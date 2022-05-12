@@ -49,14 +49,16 @@ router.post('/login', async (req, res) => {
     }
 
     let requestUser = dbUserData.dataValues.username
+    let requestUserId = dbUserData.dataValues.id
+    
 
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.user = requestUser
-
+      req.session.userId = requestUserId;
       res.status(200).json(dbUserData);
     });
-  } catch (err) {
+  }catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
@@ -72,5 +74,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 
 module.exports = router;
