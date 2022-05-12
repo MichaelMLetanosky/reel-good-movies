@@ -15,7 +15,7 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    imdbID: {
+    imdbId: {
       type: DataTypes.STRING,
       allowNull: false
     },

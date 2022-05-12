@@ -7,6 +7,41 @@
 
 }
 
+
+
+
+
+/* User profile page */
+.favorite-movies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-thumbnail{
+    display: flex;
+    padding: 1rem;
+}
+
+.div-padding {
+    padding: .5rem;
+}
+
+.max-card{
+    padding: 1rem;
+}
+
+.movie-review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60%;
+}
+
+
+
+
+/*  */
 .center-page{
     display: flex;
     flex-direction: column;
@@ -100,6 +135,9 @@ h1{
     margin-top: 3%;
 }
 .profile-lists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 4%;
 }
 h2{
@@ -120,10 +158,12 @@ label{
 }
 
 .footer{
-    position: absolute;
+    position: fixed;
+    /* margin-top: 2rem; */
     bottom: 0;
     width: 100%;
 }
+
 .svg-name{
     display: flex;
     justify-content: center;
@@ -156,6 +196,9 @@ label{
     align-items: center;
     margin-left: auto;
 }
+
+
+/*  */
 @media screen and (max-width: 900px){
     .login-center-box{
         width: 80%;
@@ -173,6 +216,14 @@ label{
         min-width: 5rem;
     }
 }
+
+@media screen and (max-width: 780px){
+    .movie-thumbnail{
+        flex-direction: column;
+        width: 12rem;
+    }
+}
+
 
 @media screen and (max-width: 550px){
     /* .header-input{
@@ -212,3 +263,469 @@ label{
         margin: auto;
     }
 }
+/*  */
+
+
+
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+/*======================== Classes for Results ========================*/
+
+/*======================== Random classes ========================*/
+
+.div-padding {
+  padding: 1rem;
+}
+/*================ All movie info classes ================*/
+
+
+.all-movie-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.holds-movie-poster {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.movie-poster-div {
+  display: flex;
+  justify-content: center;
+}
+
+.img-movie-poster {
+  width: 550px;
+  height: auto;
+}
+
+.movie-card-div {
+  display: flex;
+  /* justify-content: center; */
+  max-width: 60%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+
+.card {
+  margin-bottom: 0;
+}
+
+h1.movie-header-text {
+  font-weight: 600;
+  line-height: 1.125;
+  font-size: 2.5rem;
+}
+
+.card-text-info {
+  font-size: 1.5rem;
+}
+
+/* .movie-info-div{
+} */
+
+/*================ movie buttons ================*/
+.movie-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.btn-user-response {
+  padding: 15px 32px;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*================ Similar movie posters and review================*/
+/*====================== Movie review ======================*/
+.max-card{
+  width: 90%;
+  padding: 1rem;
+  /* height: 65rem; */
+}
+
+.movie-review{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-content-main{
+  overflow: scroll;
+}
+
+.review-info-div {
+  padding: 1rem;
+}
+
+.holds-review-similar{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+
+.review-half-div-single{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; 
+}
+
+.review-half-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 50%; */
+}
+
+.carousel-div{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+/* .carousel{
+  width: 45%;
+} */
+
+.similar-movies {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+}
+
+.many-movie-posters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fff;
+  width: 70%;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+hr {
+  border-top: 2px solid black;
+  border-radius: 50%;
+  width: 90%;
+}
+
+/* .img-small-poster {
+  width: 10%;
+} */
+
+/*==================== Slider ====================*/
+
+.slider {
+  overflow: hidden;
+  height: 360px;
+  /* width: 45%; */
+}
+.figureslider {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s infinite slider;
+}
+
+.slider-img {
+  cursor:pointer;
+  height: 350px;
+  padding: 1rem;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100;
+  }
+  45% {
+    left: -100;
+  }
+  50% {
+    left: -200;
+  }
+  70% {
+    left: -200%;
+  }
+}
+/*==========================================================*/
+
+
+/*==========================================================*/
+/*==================== Modal Review Css ====================*/
+.container {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.rating {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  height: 150px;
+  position: relative;
+}
+
+.rating-0 {
+  filter: grayscale(100%);
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23e3e3e3' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  transition: 0.3s;
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23fcd93a' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+.rating > input:not(:checked) ~ label:hover,
+.rating > input:not(:checked) ~ label:hover ~ label {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='126.729' height='126.73'%3e%3cpath fill='%23d8b11e' d='M121.215 44.212l-34.899-3.3c-2.2-.2-4.101-1.6-5-3.7l-12.5-30.3c-2-5-9.101-5-11.101 0l-12.4 30.3c-.8 2.1-2.8 3.5-5 3.7l-34.9 3.3c-5.2.5-7.3 7-3.4 10.5l26.3 23.1c1.7 1.5 2.4 3.7 1.9 5.9l-7.9 32.399c-1.2 5.101 4.3 9.3 8.9 6.601l29.1-17.101c1.9-1.1 4.2-1.1 6.1 0l29.101 17.101c4.6 2.699 10.1-1.4 8.899-6.601l-7.8-32.399c-.5-2.2.2-4.4 1.9-5.9l26.3-23.1c3.8-3.5 1.6-10-3.6-10.5z'/%3e%3c/svg%3e");
+}
+
+.emoji-wrapper {
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.emoji-wrapper:before,
+.emoji-wrapper:after {
+  content: "";
+  height: 15px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+/* .emoji-wrapper:before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(255, 255, 255, 0) 100%
+  );
+} */
+
+.emoji-wrapper:after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.emoji > svg {
+  margin: 15px 0;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+#rating-1:checked ~ .emoji-wrapper > .emoji {
+  transform: translateY(-100px);
+}
+#rating-2:checked ~ .emoji-wrapper > .emoji {
+  transform: translateY(-200px);
+}
+#rating-3:checked ~ .emoji-wrapper > .emoji {
+  transform: translateY(-300px);
+}
+#rating-4:checked ~ .emoji-wrapper > .emoji {
+  transform: translateY(-400px);
+}
+#rating-5:checked ~ .emoji-wrapper > .emoji {
+  transform: translateY(-500px);
+}
+
+.feedback {
+  max-width: 360px;
+  /* background-color: #fff; */
+  width: 100%;
+  padding: 30px;
+  /* border-radius: 8px; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); */
+}
+
+/*==================== Responsive ====================*/
+
+@media screen and (max-width: 1500px) {
+  .carousel-div{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .movie-card-div{
+    max-width: 50%;
+  }
+  .holds-movie-poster{
+    padding: 0;
+  }
+  /* .img-movie-poster{
+    
+  } */
+  .movie-info{
+    padding: 0;
+  }
+  .all-movie-info{
+    margin: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 1050px) {
+  .carousel-div{
+    width: 80%;
+  }
+  .max-card{
+    height: 55rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .all-movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .all-movie-info{
+    margin: 1rem;
+  }
+  .movie-card-div{
+    max-width: 60%;
+  }
+  
+}
+
+@media screen and (max-width: 950px) {
+  .movie-card-div{
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .movie-card-div{
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .movie-card-div{
+    max-width: 80%;
+  }
+  .all-movie-info{
+    margin: .5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .max-card{
+    padding: 0rem;
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .holds-review-similar{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .review-half-div{
+    width: auto;
+  }
+  .similar-movies{
+    margin-top: 2rem;
+    width: auto;
+  }
+  .movie-card-div{
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .movie-card-div{
+    max-width: 100%;
+  }
+  .movie-buttons{
+    flex-direction: column;
+  }
+  .div-padding{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content h1{
+    font-size: 1.5rem;
+  }
+  .content h2{
+    font-size: 1.25rem;
+  }
+  /*   */
+  .card-text-info{
+    font-size: 1rem;
+  }
+}
+/* ==========================================  */

@@ -27,8 +27,10 @@
         <section class="movie-results">
             <div class="movie-thumbnail">
                 {{#each movies as |wantToWatch|}}
+                <div class="favorite-movies">
                     <h2>{{movie_title}}</h2>
                     <img src="{{movie_poster}}" class="img-small-poster" alt="similar movies" />
+                </div>
                 {{/each}}
             </div>
         </section>
@@ -36,9 +38,27 @@
 </section>
 
 <div class="container">
-    {{#each reviews as |review|}}
-        {{> review-details}}
-    {{/each}}
+    <section class="review-half-div">
+    <div class="movie-review">
+        <h1 class="movie-header-text">User Reviews</h1>
+        <hr />
+        <!-- page review -->
+        <div class="card max-card">
+            <div class="card-content-main">
+                <div class="content">
+                    <div class="review-info-div">
+                        {{#each reviews as |review|}}
+                            {{> review-details}}
+                            
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+   
 </div>
 
 {{!-- <div class="container">
