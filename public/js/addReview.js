@@ -6,11 +6,14 @@ const reviewFormHandler = async (event) => {
     const content = document.querySelector('#review-content').value.trim();
     const review_likes = document.querySelector('input[name="rating"]:checked').value;
     const userId = document.querySelector("#ugly-userId").textContent;
+    // const movieName = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+    const movie_id = document.querySelector("#ugly-movieId").textContent;
+
     console.log({
       content: content,
       review_likes: review_likes,
       user_id: userId,
-      movie_id: "1"
+      movie_id: movie_id
     })
     
     if (content && review_likes) {
@@ -19,8 +22,8 @@ const reviewFormHandler = async (event) => {
         body: JSON.stringify({
           content: content,
           review_likes: review_likes,
-          user_id: user_id,
-          movie_id: "1",
+          user_id: userId,
+          movie_id: movie_id,
         }),
         headers: { 'Content-Type': 'application/json' },
       });

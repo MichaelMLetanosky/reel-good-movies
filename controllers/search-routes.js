@@ -29,14 +29,18 @@ router.get('/:movieTitle', (req, res) => {
             const movieData = await Movie.findOne({
                 where: { movie_title: singleMovie.movie_title}
             })
+            const movieId = movieData.id
 
             if (movieData) {
+                const userId = req.session.userId
+                console.log(movieId)
                 console.log('found entry')
-                res.render('singleMovie', singleMovie);
+                res.render('singleMovie', {singleMovie, userId, movieId});
             } else {
                 console.log('no entry found')
+                const userId = req.session.userId
                 Movie.create(singleMovie)
-                res.render('singleMovie', singleMovie)
+                res.render('singleMovie', {singleMovie, userId, movieId})
             }
         } catch (err) {
             res.status(500).json(err);
