@@ -7,6 +7,9 @@
   <title>Reel Good Movies</title>
   {{!-- Reset CSS --}}
   <link rel="stylesheet" href="/public/css/reset.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+ 
   {{!-- Bulma link --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   {{!-- Google fonts link --}}
@@ -15,12 +18,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   {{!-- Custom css --}}
   <link rel="stylesheet" href="../css/style.css">
+  {{!-- Custom CSS--}}
+  <link rel="stylesheet" href="/public/css/singlemovie.css">
 </head>
 
 <body>
   <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="" href="">
+      <a class="" href="/">
         <img src="../img/cropped-Reel Good Movies-logos_transparent.png" style="height: 4.5rem;">
       </a>
       <div class="navbar-start">
@@ -34,6 +39,9 @@
      <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
+            <a href="/"><button class="button is-dark">
+            Profile
+            </button></a>
           <button class="button is-dark" id="logout">
             Log out
           </button>
@@ -57,19 +65,15 @@
   <main>
     {{{body}}}
   </main>
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Reel Good Movies</strong> created by <a href="https://github.com/MichaelMLetanosky">Michael
-          Letanosky</a>, <a href="https://github.com/sgamit09">Scott Gamit</a>, <a
-          href="https://github.com/Phillip48">Phillip Pereira</a>, and <a href="https://github.com/VBamalie">Molly Von
-          Behren</a>
-      </p>
-    </div>
-  </footer>
+ 
 </body>
 
-
+  <!-- Bootstrap and other party JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Modal JS -->
+  <script src="../js/modalreview.js"></script>
   <script src="../js/logout.js"></script>
 
 </html>
