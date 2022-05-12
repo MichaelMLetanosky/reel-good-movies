@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const axios = require('axios');
-const { Movie } = require('../models');
+const { Movie, Review, User } = require('../models');
 
 
 router.get('/:movieTitle', (req, res) => {
@@ -27,20 +27,23 @@ router.get('/:movieTitle', (req, res) => {
         console.log('looking for db entry')
         try {
             const movieData = await Movie.findOne({
-                where: { movie_title: singleMovie.movie_title}
+                where: { movie_title: singleMovie.movie_title},
+                include: [{model: Review, include: [{model: User}, {model: User}]}]
             })
+            const userStuff = movieData.get({plain: true})
             const movieId = movieData.id
+            const reviews = userStuff.reviews
+            console.log(reviews)
 
             if (movieData) {
                 const userId = req.session.userId
-                console.log(movieId)
                 console.log('found entry')
-                res.render('singleMovie', {singleMovie, userId, movieId});
+                res.render('singleMovie', {singleMovie, userId, movieId, reviews});
             } else {
                 console.log('no entry found')
                 const userId = req.session.userId
                 Movie.create(singleMovie)
-                res.render('singleMovie', {singleMovie, userId, movieId})
+                res.render('singleMovie', {...singleMovie, ...userId, ...movieId, ...reviews})
             }
         } catch (err) {
             res.status(500).json(err);
