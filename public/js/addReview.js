@@ -8,14 +8,8 @@ const reviewFormHandler = async (event) => {
     const userId = document.querySelector("#ugly-userId").textContent;
     // const movieName = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
     const movie_id = document.querySelector("#ugly-movieId").textContent;
-    const movie_title = document.querySelector("#get-title-name").textContent;
 
-    console.log({
-      content: content,
-      review_likes: review_likes,
-      user_id: userId,
-      movie_id: movie_id
-    })
+    const movie_title = document.querySelector("#get-title-name").textContent;
     
     if (content && review_likes) {
       const response = await fetch('/api/reviews', {

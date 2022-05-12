@@ -8,8 +8,18 @@
 }
 
 
+/*  */
+.background-homepage{
+  background-image: url(../img/movie-theater1.webp);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 
-
+.search-buttons{
+  display: flex;
+  justify-content: center;
+}
 
 /* User profile page */
 .favorite-movies{
@@ -20,6 +30,7 @@
 
 .movie-thumbnail{
     display: flex;
+    flex-wrap: wrap;
     padding: 1rem;
 }
 
@@ -203,9 +214,31 @@ label{
 
 
 /*  */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1050px){
+  .img-small-poster{
+    max-width: 80%;
+  }
+  .favorite-movies{
+    display: flex;
+    /* max-width: 45%; */
+    align-items: center;
+  }
+  .favorite-movies-text{
+    font-size: large;
+    font-weight: 400;
+  }
+  .movie-thumbnail{
+    justify-content: center;
+    align-items: center;
+  }
+} 
+
+@media screen and (max-width: 960px){
     .login-center-box{
         width: 80%;
+    }
+    .input-header{
+      min-width: 15rem;
     }
 }
 
@@ -213,19 +246,42 @@ label{
     .login-and-Signup{
         flex-direction: column;
     }
-}
-
-@media screen and (max-width: 780px){
-    .header-input{
-        min-width: 5rem;
+    .navbar{
+      justify-content: center;
     }
 }
 
 @media screen and (max-width: 780px){
-    .movie-thumbnail{
+    /* .header-input{
+        min-width: 5rem;
+    } */
+}
+
+@media screen and (max-width: 780px){
+    /* .movie-thumbnail{
         flex-direction: column;
         width: 12rem;
+    } */
+    .navbar{
+      justify-content: center;
     }
+}
+
+@media screen and (max-width: 730px){
+  .movie-thumbnail{
+      flex-direction: column;
+      width: 12rem;
+  }
+  .navbar{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 630px){
+  /* .header-input{
+    min-width: 3rem;
+  } */
+  
 }
 
 
@@ -236,6 +292,23 @@ label{
     .input{
         min-width: auto;
     }
+    .navbar-brand{
+      justify-content: center;
+      
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+  .navbar-end{
+      justify-content: center;
+      margin: auto;
+  }
+  .search-buttons{
+    flex-direction: column
+  }
 }
 
 @media screen and (max-width: 490px){
@@ -265,6 +338,9 @@ label{
     .navbar-end{
         justify-content: center;
         margin: auto;
+    }
+    .search-buttons{
+      flex-direction: column
     }
 }
 /*  */
@@ -375,8 +451,9 @@ h1.movie-header-text {
 
 .holds-review-similar{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .review-half-div-single{

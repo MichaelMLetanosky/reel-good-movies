@@ -36,7 +36,6 @@ router.get('/:movieTitle', (req, res) => {
                 const userStuff = movieData.get({ plain: true })
                 const movieId = movieData.id
                 const reviews = userStuff.reviews
-                console.log(reviews)
                 const userId = req.session.userId
                 console.log('found entry')
                 res.render('singleMovie', { singleMovie, userId, movieId, reviews });
