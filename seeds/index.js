@@ -23,7 +23,7 @@ const seedAll = async () => {
   await UserMovie.bulkCreate(userMovieData)
 
   await FollowedUser.bulkCreate(followedUserData)
- 
+
   process.exit(0);
 };
 

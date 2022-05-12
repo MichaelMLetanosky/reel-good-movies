@@ -208,6 +208,10 @@ label{
     margin-left: auto;
 }
 
+#reviewer-link{
+  text-decoration: none;
+}
+
 
 /*  */
 @media screen and (max-width: 1050px){

@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     try {
         console.log('finding user')
         const followeeData = await User.findOne({
-            where: { username: req.body.followeeUsername}
+            where: { username: req.body.followeeUsername }
         })
         console.log(followeeData)
         let followObject = {

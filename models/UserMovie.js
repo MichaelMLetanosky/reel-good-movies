@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class UserMovie extends Model {}
+class UserMovie extends Model { }
 
 //Keeps track of movies that user want to add to a watch list or if we have time add to a favorites list
 

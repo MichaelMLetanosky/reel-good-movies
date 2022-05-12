@@ -28,37 +28,29 @@ router.get('/:movieTitle', (req, res) => {
         console.log('looking for db entry')
         try {
             const movieData = await Movie.findOne({
-                where: { movie_title: singleMovie.movie_title},
-                include: [{model: Review, include: [{model: User}, {model: User}]}]
+                where: { movie_title: singleMovie.movie_title },
+                include: [{ model: Review, include: [{ model: User }, { model: User }] }]
             })
-            // const userStuff = movieData.get({plain: true})
-            // const movieId = movieData.id
-            // const reviews = userStuff.reviews
-            // console.log(reviews)
 
             if (movieData) {
-                const userStuff = movieData.get({plain: true})
+                const userStuff = movieData.get({ plain: true })
                 const movieId = movieData.id
                 const reviews = userStuff.reviews
                 const userId = req.session.userId
                 console.log('found entry')
-                res.render('singleMovie', {singleMovie, userId, movieId, reviews});
+                res.render('singleMovie', { singleMovie, userId, movieId, reviews });
             } else {
                 console.log('no entry found')
                 const createdMovie = await Movie.create(singleMovie)
                 const userId = req.session.userId
                 const movieId = createdMovie.id
                 const reviews = createdMovie.reviews
-                res.render('singleMovie', {singleMovie, userId, movieId, reviews});
+                res.render('singleMovie', { singleMovie, userId, movieId, reviews });
             }
         } catch (err) {
             res.status(500).json(err);
         }
     };
+});
 
-
-        
-    });
-
-        
 module.exports = router;
