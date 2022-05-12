@@ -5,8 +5,8 @@
 <section class="all-movie-info">
   <div class="holds-movie-poster">
     <div class="movie-poster-div">
-      {{mainPoster}}
-      {{!-- <img src="../img/sample movie poster.jpg" class="img-movie-poster" alt="Sample movie poster" /> --}}
+      
+      <img src="{{movie_poster}}" class="img-movie-poster" alt="Sample movie poster" />
     </div>
   </div>
   <!-- Bulma Card for Movie info -->
@@ -16,22 +16,22 @@
         <div class="card-content">
           <div class="content">
             <div class="movie-info-div">
-              <h1 class="movie-header-text">{{movieCardTitle}}</h1>
+              <h1 class="movie-header-text">{{title}}</h1>
               <h2>Director:</h2>
-              <p class="card-text-info">{{movieDirector}}</p>
+              <p class="card-text-info">{{director}}</p>
 
               <h2>Runtime:</h2>
-              <p class="card-text-info">{{movieRuntime}}</p>
+              <p class="card-text-info">{{runtime}}</p>
               <h2>Plot:</h2>
               <p class="card-text-info">
-                {{moviePlot}}
+                {{plot}}
               </p>
               <h2>Actors:</h2>
               <p class="card-text-info">
-                {{MovieActors}}
+                {{actors}}
               </p>
               <h2>Ratings:</h2>
-              <h5>⭐{{MovieRatings}}</h5>
+              <h5>⭐{{review_rating}}</h5>
             </div>
           </div>
         </div>
@@ -75,9 +75,9 @@
 
         <!-- The slideshow -->
         <div class="carousel-inner">
-          {{#each similarMoviePoster as |similarMovies|}}
+          {{#each similarMoviePoster}}
             <div class="carousel-item active">
-              <a href="/api/movie"><img src="{{moviePosterImg}}" alt="Similar movie poster" width="1100" height="500"></a>
+              <img src="{{movie_poster}}" alt="Similar movie poster" width="1100" height="500">
               {{!-- <img src="../img/sample movie poster.jpg" alt="Los Angeles" width="1100" height="500"> --}}
             </div>
           {{/each}}
