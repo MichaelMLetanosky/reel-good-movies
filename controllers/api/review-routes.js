@@ -7,7 +7,7 @@ const { Review, User, Movie } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const movieData = await Review.findAll({
-            include: [{ model: User, attributes: ['username'] }, { model: Movie, attributes: ['movie_title']}]
+            include: [{ model: User, attributes: ['username'] }, { model: Movie, attributes: ['movie_title'] }]
         });
         res.status(200).json(movieData);
     } catch (err) {
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const movieData = await Review.findByPk(req.params.id, {
-            include: [{ model: User, attributes: ['username'] }, { model: Movie, attributes: ['movie_title']}]
+            include: [{ model: User, attributes: ['username'] }, { model: Movie, attributes: ['movie_title'] }]
         });
 
         if (!movieData) {
