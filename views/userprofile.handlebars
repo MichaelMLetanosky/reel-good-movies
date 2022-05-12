@@ -29,7 +29,7 @@
                 {{#each movies as |wantToWatch|}}
                 <div class="favorite-movies">
                     <h2>{{movie_title}}</h2>
-                    <img src="{{movie_poster}}" class="img-small-poster" alt="similar movies" />
+                    <a href='/search/{{movie_title}}'><img src="{{movie_poster}}" class="img-small-poster" alt="similar movies" /></a>
                 </div>
                 {{/each}}
             </div>
