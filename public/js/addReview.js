@@ -29,7 +29,7 @@ const reviewFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        console.log("success")
+        document.location.replace("/search/")
       } else {
         alert('Failed to work.');
       }

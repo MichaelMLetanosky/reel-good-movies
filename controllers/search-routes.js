@@ -31,10 +31,6 @@ router.get('/:movieTitle', (req, res) => {
                 where: { movie_title: singleMovie.movie_title},
                 include: [{model: Review, include: [{model: User}, {model: User}]}]
             })
-            // const userStuff = movieData.get({plain: true})
-            // const movieId = movieData.id
-            // const reviews = userStuff.reviews
-            // console.log(reviews)
 
             if (movieData) {
                 const userStuff = movieData.get({plain: true})
