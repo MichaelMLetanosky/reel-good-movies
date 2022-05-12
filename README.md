@@ -48,9 +48,9 @@ In order to accomplish the challenge, the following steps were done:
 
 ## Installation
 
-The project was uploaded to [GitHub](https://github.com/) at the following repository:
+The project was uploaded to [GitHub](https://github.com/) at the following repository: https://github.com/MichaelMLetanosky/reel-good-movies
 
-You can access the deployed application with the Heroku link:
+You can access the deployed application with the Heroku link: https://boiling-meadow-77947.herokuapp.com/
 
 To install the project follow these steps:
 
