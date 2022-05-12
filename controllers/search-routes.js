@@ -38,14 +38,14 @@ router.get('/:movieTitle', (req, res) => {
                 const reviews = userStuff.reviews
                 const userId = req.session.userId
                 console.log('found entry')
-                res.render('singleMovie', { singleMovie, userId, movieId, reviews });
+                res.render('singleMovie', { singleMovie, userId, movieId, reviews, loggedIn:req.session.loggedIn });
             } else {
                 console.log('no entry found')
                 const createdMovie = await Movie.create(singleMovie)
                 const userId = req.session.userId
                 const movieId = createdMovie.id
                 const reviews = createdMovie.reviews
-                res.render('singleMovie', { singleMovie, userId, movieId, reviews });
+                res.render('singleMovie', { singleMovie, userId, movieId, reviews, loggedIn:req.session.loggedIn });
             }
         } catch (err) {
             res.status(500).json(err);
