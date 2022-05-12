@@ -2,6 +2,7 @@ const router = require('express').Router();
 const axios = require('axios');
 const { Movie, Review, User } = require('../models');
 
+// uses '/search' endpoint
 
 router.get('/:movieTitle', (req, res) => {
     let apiUrl = `https://www.omdbapi.com/?apikey=1d2b52b9&t=${req.params.movieTitle}`
