@@ -30,7 +30,7 @@ UserMovie.init(
     },
     has_watched: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
       default: false
     }
   },

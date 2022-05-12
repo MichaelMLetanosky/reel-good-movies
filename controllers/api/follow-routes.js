@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { FollowedUser, User, Movie } = require('../../models');
+const { FollowedUser, User } = require('../../models');
 
 // The `/api/follow` endpoint
 
