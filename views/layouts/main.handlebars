@@ -30,33 +30,42 @@
       </a>
       <div class="navbar-start">
         <div class="control navbar-item">
-          <input class="input header-input" type="text" placeholder="Search For a Movie">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" id="movie-name"placeholder="Find a movie">
+            </div>
+            <div class="control">
+              <a class="button is-info " id="movie-form">
+                Search
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- If they havent logged in yet-->
     {{#if loggedIn}}
-     <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
           <button class="button is-dark" id="logout">
             Log out
           </button>
-          </div>
         </div>
       </div>
+    </div>
 
     {{else}}
-          <!--If they have logged in already-->
-     <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
+    <!--If they have logged in already-->
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
           <a class="button is-dark" href="/login">
             Log in
           </a>
-          </div>
         </div>
       </div>
+    </div>
     {{/if}}
   </nav>
   <main>
@@ -65,6 +74,7 @@
  
 </body>
 
+
   <!-- Bootstrap and other party JS -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -72,5 +82,8 @@
   <!-- Modal JS -->
   <script src="../js/modalreview.js"></script>
   <script src="../js/logout.js"></script>
+
+<script src="../js/movies.js"></script>
+
 
 </html>
