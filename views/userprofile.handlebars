@@ -3,6 +3,7 @@
         <div>
             <p class="heading">Username:</p>
                 <p class="title">{{username}}</p>
+                <button class="button is-dark" id="follow-button">Follow</button>
         </div>
     </div>
     <div class="level-item has-text-centered">
@@ -15,7 +16,7 @@
         <div>
             <p class="heading">Follows</p>
             {{#each followee as |follow|}}
-                <p class="title">{{username}}</p>
+                <a href='/username/{{username}}'><p class="title">{{username}}</p></a>
             {{/each}}
         </div>
     </div>
