@@ -71,14 +71,27 @@ To install the project follow these steps:
 
 As the user I want to organize and curate the movies I have watched and want to watch. I also want to write reviews so I can steer my followers away from bad movies such as Epic Movie and towards good movies like Shrek 2 & Logan. Because I know Reel Good Movies.
 
-The Application:
+The Application In All It's Glorious Purpose...
 
-Screenshots of Application:
+**Screenshots of Application:**
 
-Screenshots of wireframe:
+![image](https://user-images.githubusercontent.com/98362675/168286367-bdf24c8f-7c42-414d-8067-747cf2e4eebc.png)
 
-Screenshots of SQL database diagram:
+![image](https://user-images.githubusercontent.com/98362675/168286912-ccd6e9cb-60ff-411e-964f-099f6bc0a010.png)
 
+![image](https://user-images.githubusercontent.com/98362675/168286807-0c30e860-0f00-4e95-a532-960b98e7d314.png)
+
+**Screenshots of Wireframe:**
+
+![image](https://user-images.githubusercontent.com/98362675/168287138-57911921-edca-4d75-b2ad-0ecfec3bb0a3.png)
+
+![image](https://user-images.githubusercontent.com/98362675/168287258-49a96f7f-1e16-4746-8e31-f244c5fb3122.png)
+
+![image](https://user-images.githubusercontent.com/98362675/168287308-be416efa-65c3-4f64-83de-84cd514fee62.png)
+
+**Screenshots of SQL Database Diagram:**
+
+![image](https://user-images.githubusercontent.com/98362675/168287493-67fd36e7-76d9-4b58-bc85-fdeadea37c80.png)
 
 ## Contributing
 
